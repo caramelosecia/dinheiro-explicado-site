@@ -22,7 +22,7 @@ GRUPO = SITE.get("grupo_ofertas", {}) if SITE.get("grupo_ofertas", {}).get("url"
 DOM = SITE.get("dominio", "").rstrip("/")
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 TEM_ACHADOS = bool(VITRINE)
-VER = "4"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
+VER = "5"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
 
 AVISO_AFILIADO = ("Este conteúdo tem links de afiliado. Se você comprar por eles, o Dinheiro Explicado pode receber uma comissão, "
                   "sem nenhum custo extra para você. Isso não muda o que a gente recomenda.")
@@ -323,7 +323,7 @@ def home():
     r = ""
     ultimos = POSTS[:9]
     lista = f'<div class="grade-posts">{"".join(card(p, r) for p in ultimos)}</div>' if ultimos else vazio()
-    blocos = f'''<div class="bloco-topo"><span class="ic">{ic("livro", 24)}</span><div><h2>Últimos artigos</h2><p>Benefícios, FGTS, INSS, renda extra, dívidas e direitos do trabalhador, sempre com a fonte oficial.</p></div>
+    blocos = f'''<div class="bloco-topo"><span class="ic">{ic("livro", 24)}</span><div><h2>Últimos artigos</h2></div>
 <a class="ver-mais" href="{u(r, "blog/")}">Ver todos {ic("seta", 18)}</a></div>
 {lista}'''
     calc_home = f'''<section class="secao" style="padding-top:0"><div class="wrap"><div class="faixa-calc revela" style="margin:0"><div class="faixa-calc-texto"><span class="sobre">Calculadora</span>

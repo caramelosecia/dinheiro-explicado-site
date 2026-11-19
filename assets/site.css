@@ -399,3 +399,7 @@ p{margin:0 0 1em}
 .btn-whats{flex:none;background:#25D366;color:#073B1C!important;text-decoration:none!important;padding:13px 20px}
 .btn-whats:hover{background:var(--noite);color:#fff!important}
 @media (max-width:640px){.cta-whats{flex-wrap:wrap}.cta-whats div{flex-basis:calc(100% - 72px)}.btn-whats{width:100%}}
+.card h3{font-size:1.32rem;font-weight:800;line-height:1.22;letter-spacing:-.015em}
+.card h3 a{color:var(--noite)}
+.card .corpo{gap:10px}
+@media (max-width:640px){.card h3{font-size:1.25rem}}
