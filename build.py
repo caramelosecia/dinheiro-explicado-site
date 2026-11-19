@@ -22,7 +22,7 @@ GRUPO = SITE.get("grupo_ofertas", {}) if SITE.get("grupo_ofertas", {}).get("url"
 DOM = SITE.get("dominio", "").rstrip("/")
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 TEM_ACHADOS = bool(VITRINE)
-VER = "5"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
+VER = "6"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
 
 AVISO_AFILIADO = ("Este conteúdo tem links de afiliado. Se você comprar por eles, o Dinheiro Explicado pode receber uma comissão, "
                   "sem nenhum custo extra para você. Isso não muda o que a gente recomenda.")

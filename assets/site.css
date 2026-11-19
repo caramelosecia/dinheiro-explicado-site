@@ -403,3 +403,12 @@ p{margin:0 0 1em}
 .card h3 a{color:var(--noite)}
 .card .corpo{gap:10px}
 @media (max-width:640px){.card h3{font-size:1.25rem}}
+/* filtros sem rolagem */
+.filtros{flex-wrap:wrap;overflow:visible;padding-bottom:0;gap:10px}
+.filtros button{flex:0 0 auto}
+@media (max-width:640px){
+  .filtros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .filtros button{justify-content:flex-start;padding:10px 12px;font-size:.86rem;border-radius:14px;text-align:left;line-height:1.2}
+  .filtros button small{margin-left:auto}
+  .filtros button:first-child{grid-column:1/-1;justify-content:center}
+}
