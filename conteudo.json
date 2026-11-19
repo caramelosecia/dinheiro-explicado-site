@@ -1,0 +1,154 @@
+{
+  "site": {
+    "nome": "Dinheiro Explicado",
+    "dominio": "https://dinheiroexplicado.com.br",
+    "descricao": "Benefícios, aposentadoria, FGTS, renda extra, dívidas, impostos e direitos do trabalhador explicados em linguagem simples, com fonte oficial em todo artigo.",
+    "autora": {
+      "nome": "Sara Marques Amorim",
+      "iniciais": "SM",
+      "cargo": "Redatora e publicitária",
+      "foto": "https://2.gravatar.com/avatar/63d956ff6b3c726bd34a020a5595e4d007526623e1f500ca32404b8faa6a36b1?size=320&d=initials",
+      "bio": "Sara Marques Amorim é publicitária e redatora, formada em Produção Publicitária. Escreve todos os textos do Dinheiro Explicado. Seu trabalho é transformar regra, portaria e letra miúda em resposta clara: quem tem direito, quanto recebe e quando o dinheiro cai.",
+      "links": [
+        {
+          "nome": "Contato",
+          "url": "https://gravatar.com/saramarquesamo"
+        }
+      ]
+    },
+    "grupo_ofertas": {
+      "nome": "",
+      "url": "",
+      "texto": "Entre no grupo e receba ofertas e alertas de golpe direto no celular."
+    },
+    "buscas_populares": [
+      "Bolsa Família",
+      "FGTS",
+      "INSS",
+      "Renda extra",
+      "Limpar o nome",
+      "13º salário"
+    ]
+  },
+  "categorias": [
+    {
+      "slug": "beneficios",
+      "nome": "Benefícios sociais",
+      "icone": "maos",
+      "descricao": "Bolsa Família, BPC, Pé-de-Meia, Auxílio Gás e outros: quem tem direito e quando cai."
+    },
+    {
+      "slug": "aposentadoria",
+      "nome": "Aposentadoria e INSS",
+      "icone": "relogio",
+      "descricao": "Regras, cálculo, revisão e calendário de pagamento do INSS."
+    },
+    {
+      "slug": "fgts",
+      "nome": "FGTS",
+      "icone": "cofre",
+      "descricao": "Saldo, saque-aniversário, saque-rescisão e como consultar o que é seu."
+    },
+    {
+      "slug": "renda-extra",
+      "nome": "Renda extra",
+      "icone": "foguete",
+      "descricao": "Ideias reais para ganhar um dinheiro a mais, quanto custa começar e o que evitar."
+    },
+    {
+      "slug": "trabalho",
+      "nome": "Direitos do trabalhador",
+      "icone": "maleta",
+      "descricao": "Salário mínimo, 13º, férias, seguro-desemprego, abono PIS/Pasep e rescisão."
+    },
+    {
+      "slug": "dividas",
+      "nome": "Dívidas e nome limpo",
+      "icone": "recibo",
+      "descricao": "Negociação, Desenrola, Serasa e seus direitos na hora de cobrar e ser cobrado."
+    },
+    {
+      "slug": "impostos",
+      "nome": "Impostos e Receita",
+      "icone": "documento",
+      "descricao": "Imposto de Renda, restituição, CPF e MEI sem complicação."
+    },
+    {
+      "slug": "credito",
+      "nome": "Crédito e empréstimo",
+      "icone": "cartao",
+      "descricao": "Como comparar juros, consignado, cartão e o que olhar antes de assinar."
+    }
+  ],
+  "posts": [
+    {
+      "slug": "exemplo-de-artigo",
+      "rascunho": true,
+      "titulo": "Exemplo: como um artigo aparece no Dinheiro Explicado",
+      "resumo": "Página de exemplo para mostrar o layout de um artigo. Ela só aparece na prévia e nunca vai para o site no ar.",
+      "categoria": "beneficios",
+      "data": "2026-11-19",
+      "atualizado": "2026-11-19",
+      "capa": "",
+      "alt_capa": "",
+      "fontes": [
+        {
+          "nome": "Nome do órgão oficial — página consultada",
+          "url": "https://www.gov.br/"
+        }
+      ],
+      "corpo": "@resposta Aqui entra a resposta curta para a pergunta do título, em uma ou duas frases. Quem tem pressa lê só isso e já sai sabendo o principal.\n\n## Quem tem direito\n\nTexto explicando a regra em linguagem simples. Cada número, data ou valor vem com a fonte oficial, citada no fim da página.\n\n- Primeiro requisito, escrito do jeito que a pessoa fala\n- Segundo requisito\n- Terceiro requisito\n\n## Quanto e quando cai\n\n| Final do NIS | Data de pagamento |\n|---|---|\n| 1 | dia de exemplo |\n| 2 | dia de exemplo |\n\n> Destaque para uma informação que a pessoa não pode deixar passar.\n\n## Como consultar\n\n1. Primeiro passo\n2. Segundo passo\n3. Terceiro passo\n\n@golpe Nenhum órgão público cobra para consultar ou liberar benefício. Se pedirem pagamento antecipado, é golpe."
+    },
+    {
+      "slug": "exemplo-renda-extra",
+      "rascunho": true,
+      "afiliado": true,
+      "titulo": "Exemplo: artigo de renda extra com produtos de afiliado",
+      "resumo": "Página de exemplo para mostrar como ficam os cards de produto e o aviso de afiliado. Só aparece na prévia.",
+      "categoria": "renda-extra",
+      "data": "2026-11-19",
+      "atualizado": "2026-11-19",
+      "capa": "",
+      "alt_capa": "",
+      "fontes": [
+        {
+          "nome": "Fonte de exemplo",
+          "url": "https://www.gov.br/"
+        }
+      ],
+      "corpo": "@resposta Resposta curta: qual é a ideia de renda extra, quanto custa para começar e quanto dá para ganhar, em uma ou duas frases.\n\n## Como funciona\n\nTexto explicando a ideia em linguagem simples, com o passo a passo para começar.\n\n## Quanto custa começar\n\n| Item | Custo aproximado |\n|---|---|\n| Item de exemplo | R$ 0 |\n| Outro item | R$ 0 |\n\n## O que você vai precisar\n\n@produto Produto de exemplo | Uma frase dizendo para que serve e por que vale a pena. | https://exemplo.com | | R$ 00,00 | Loja parceira\n@produto Outro produto de exemplo | Os cards ficam lado a lado no computador e um embaixo do outro no celular. | https://exemplo.com | | R$ 00,00 | Loja parceira\n\n## Quanto dá para ganhar\n\nTexto com a conta feita de forma honesta, sem promessa de ganho fácil.\n\n> Desconfie de quem promete renda extra garantida ou pede pagamento para você começar a trabalhar.\n\n@golpe Vaga que pede pagamento antecipado, \"taxa de cadastro\" ou PIX para liberar tarefas é golpe."
+    }
+  ],
+  "vitrine": [
+    {
+      "rascunho": true,
+      "nome": "Produto de exemplo 1",
+      "descricao": "Aqui entra uma frase curta dizendo por que o produto ajuda a economizar ou a fazer renda extra.",
+      "link": "https://exemplo.com",
+      "img": "",
+      "preco": "R$ 00,00",
+      "loja": "Loja parceira",
+      "categoria": "renda-extra"
+    },
+    {
+      "rascunho": true,
+      "nome": "Produto de exemplo 2",
+      "descricao": "Outro achado de exemplo. Os cards só aparecem na prévia até você mandar os produtos reais.",
+      "link": "https://exemplo.com",
+      "img": "",
+      "preco": "R$ 00,00",
+      "loja": "Loja parceira",
+      "categoria": "dividas"
+    },
+    {
+      "rascunho": true,
+      "nome": "Produto de exemplo 3",
+      "descricao": "Exemplo de card de afiliado com selo e botão de oferta.",
+      "link": "https://exemplo.com",
+      "img": "",
+      "preco": "",
+      "loja": "Loja parceira",
+      "categoria": "renda-extra"
+    }
+  ]
+}
