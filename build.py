@@ -22,7 +22,7 @@ GRUPO = SITE.get("grupo_ofertas", {}) if SITE.get("grupo_ofertas", {}).get("url"
 DOM = SITE.get("dominio", "").rstrip("/")
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 TEM_ACHADOS = bool(VITRINE)
-VER = "3"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
+VER = "4"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
 
 AVISO_AFILIADO = ("Este conteúdo tem links de afiliado. Se você comprar por eles, o Dinheiro Explicado pode receber uma comissão, "
                   "sem nenhum custo extra para você. Isso não muda o que a gente recomenda.")
@@ -348,8 +348,8 @@ def home():
 </div></section>'''
     grupo = ""
     if GRUPO:
-        grupo = f'''<section class="secao"><div class="wrap"><div class="cta-grupo revela"><span class="ic">{ic("whats", 34)}</span><div><h2>Ofertas e alertas no seu celular</h2><p>{esc(GRUPO.get("texto",""))}</p></div>
-<a class="btn btn-neon" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">Entrar no grupo</a></div></div></section>'''
+        grupo = f'''<section class="secao"><div class="wrap"><div class="cta-grupo revela"><span class="ic">{ic("whats", 34)}</span><div><h2>Alertas e novidades no seu celular</h2><p>{esc(GRUPO.get("texto",""))}</p></div>
+<a class="btn btn-neon" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">Entrar no canal</a></div></div></section>'''
     jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE["nome"], "description": SITE["descricao"], "inLanguage": "pt-BR",
               "publisher": {"@type": "Organization", "name": SITE["nome"], "sameAs": [x["url"] for x in SITE.get("redes", [])]}}
     if DOM:
@@ -445,6 +445,7 @@ def artigo(p):
 {afil}
 {toc}
 {corpo}
+{cta_whats(r)}
 {share}
 <aside class="fontes" aria-label="Fontes"><h2>{ic("livro", 22)} Fontes oficiais consultadas</h2><ul>{fontes}</ul>
 <small>Publicado em {data_br(p["data"])}. Última atualização em {data_br(at)}. A informação oficial sempre vale mais: confirme no canal do órgão responsável.</small></aside>
@@ -454,6 +455,13 @@ def artigo(p):
 {rel_html}'''
     return pagina(r, f"blog/{p['slug']}/", p["titulo"], p["resumo"], c, "blog", og_img=p.get("capa") or "img/og-padrao.jpg", tipo="article", classe="pg-artigo",
                   extra_head=f'<meta property="article:published_time" content="{p["data"]}"><meta property="article:modified_time" content="{at}"><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
+
+def cta_whats(raiz):
+    if not GRUPO:
+        return ""
+    return f'''<aside class="cta-whats revela" aria-label="Canal no WhatsApp"><span class="ic">{ic("whats", 30)}</span><div>
+<b>Receba os alertas no WhatsApp</b><p>{esc(GRUPO.get("texto",""))}</p></div>
+<a class="btn btn-whats" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">Entrar no canal</a></aside>'''
 
 def ferramentas():
     r = "../"

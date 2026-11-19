@@ -391,3 +391,11 @@ p{margin:0 0 1em}
 .rodape .redes a{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:9px 16px;border-radius:999px;color:#fff;text-decoration:none;transition:background .2s,color .2s,transform .2s var(--ease)}
 .rodape .redes a:hover{background:var(--neon);color:var(--noite);text-decoration:none;transform:translateY(-2px)}
 .redes b{font-weight:600;font-size:.92rem}
+.cta-whats{display:flex;gap:16px;align-items:center;background:#E7F9EE;border:1.5px solid #9EDCB4;border-radius:20px;padding:20px 22px;margin:36px 0 0}
+.cta-whats .ic{flex:none;width:56px;height:56px;border-radius:16px;background:#25D366;color:#073B1C;display:grid;place-items:center}
+.cta-whats div{flex:1}
+.cta-whats b{display:block;font-family:var(--fonte-titulo);color:var(--noite);font-size:1.1rem;margin-bottom:2px}
+.cta-whats p{margin:0!important;font-size:.95rem;color:var(--texto-2);line-height:1.5}
+.btn-whats{flex:none;background:#25D366;color:#073B1C!important;text-decoration:none!important;padding:13px 20px}
+.btn-whats:hover{background:var(--noite);color:#fff!important}
+@media (max-width:640px){.cta-whats{flex-wrap:wrap}.cta-whats div{flex-basis:calc(100% - 72px)}.btn-whats{width:100%}}

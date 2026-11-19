@@ -31,7 +31,7 @@ Quando houver pelo menos um item sem `"rascunho": true`, o site cria a página `
 
 ## Grupo de ofertas
 
-Preencha `site.grupo_ofertas.url` (e `nome`) para mostrar o convite do grupo na página inicial e no rodapé.
+`site.grupo_ofertas` guarda o canal do WhatsApp: ele aparece no fim de todo artigo, na página inicial e no rodapé.
 
 ## Calculadoras
 
