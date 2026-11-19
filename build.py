@@ -174,7 +174,18 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
     meta_dom = ""
     if DOM:
         canon = abs_url(caminho)
-        meta_dom = f'<link rel="canonical" href="{canon}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{abs_url(og_img)}">'
+        img_abs = abs_url(og_img)
+        dims = ""
+        try:
+            from PIL import Image as _I
+            w, h = _I.open(os.path.join(RAIZ, og_img)).size
+            dims = f'<meta property="og:image:width" content="{w}"><meta property="og:image:height" content="{h}">'
+        except Exception:
+            pass
+        meta_dom = (f'<link rel="canonical" href="{canon}"><meta property="og:url" content="{canon}">'
+                    f'<meta property="og:image" content="{img_abs}"><meta property="og:image:secure_url" content="{img_abs}">'
+                    f'<meta property="og:image:type" content="image/jpeg">{dims}<meta property="og:image:alt" content="{esc(titulo)}">'
+                    f'<meta name="twitter:title" content="{esc(titulo)}"><meta name="twitter:description" content="{esc(descricao)}"><meta name="twitter:image" content="{img_abs}">')
     def item(h, n, k):
         return f'<a href="{u(raiz, h)}"' + (' aria-current="page"' if atual == k else "") + f">{n}</a>"
     drop = "".join(f'<a href="{u_assunto(raiz, c["slug"])}"><span class="ic">{ic(c["icone"], 20)}</span><span><b>{esc(c["nome"])}</b><small>{esc(c["descricao"])}</small></span></a>' for c in dados["categorias"])
