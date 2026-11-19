@@ -321,22 +321,16 @@ def calc_emprestimo(id_="calc-emprestimo"):
 # ---------- páginas ----------
 def home():
     r = ""
-    blocos = ""
-    for cat in dados["categorias"]:
-        ps = [p for p in POSTS if p["categoria"] == cat["slug"]][:3]
-        nome_min = cat["nome"] if cat["slug"] in ("fgts", "aposentadoria") else cat["nome"].lower()
-        lista = (f'<div class="grade-posts">{"".join(card(p, r) for p in ps)}</div>' if ps
-                 else f'<div class="vazio vazio-mini">Os primeiros artigos sobre {esc(nome_min)} chegam em breve.</div>')
-        blocos += f'''<div class="bloco-assunto revela" id="assunto-{cat["slug"]}">
-<div class="bloco-topo"><span class="ic cat-{cat["slug"]}">{ic(cat["icone"], 24)}</span><div><h2>Últimas de {esc(cat["nome"])}</h2><p>{esc(cat["descricao"])}</p></div>
-<a class="ver-mais" href="{u_assunto(r, cat["slug"])}">Ver mais {ic("seta", 18)}<span class="sr"> sobre {esc(cat["nome"])}</span></a></div>
-{lista}</div>'''
-        if cat["slug"] == "renda-extra":
-            blocos += f'''<section class="faixa-calc revela"><div class="faixa-calc-texto"><span class="sobre">Calculadora</span>
+    ultimos = POSTS[:9]
+    lista = f'<div class="grade-posts">{"".join(card(p, r) for p in ultimos)}</div>' if ultimos else vazio()
+    blocos = f'''<div class="bloco-topo"><span class="ic">{ic("livro", 24)}</span><div><h2>Últimos artigos</h2><p>Benefícios, FGTS, INSS, renda extra, dívidas e direitos do trabalhador, sempre com a fonte oficial.</p></div>
+<a class="ver-mais" href="{u(r, "blog/")}">Ver todos {ic("seta", 18)}</a></div>
+{lista}'''
+    calc_home = f'''<section class="secao" style="padding-top:0"><div class="wrap"><div class="faixa-calc revela" style="margin:0"><div class="faixa-calc-texto"><span class="sobre">Calculadora</span>
 <h2>Quanto de renda extra você precisa para sair do vermelho?</h2>
 <p>Faça a conta em segundos e veja quanto juntar por mês, por semana e por dia.</p>
 <a class="link-seta" href="{u(r, "ferramentas/")}">Ver todas as calculadoras {ic("seta", 18)}</a></div>
-{calc_renda("calc-renda-home", True)}</section>'''
+{calc_renda("calc-renda-home", True)}</div></div></section>'''
     chips = "".join(f'<a href="{u(r, "blog/")}?q={esc(b)}">{esc(b)}</a>' for b in SITE.get("buscas_populares", []))
     vitr = ""
     if VITRINE:
@@ -348,7 +342,7 @@ def home():
 </div></section>'''
     grupo = ""
     if GRUPO:
-        grupo = f'''<section class="secao"><div class="wrap"><div class="cta-grupo revela"><span class="ic">{ic("whats", 34)}</span><div><h2>Alertas e novidades no seu celular</h2><p>{esc(GRUPO.get("texto",""))}</p></div>
+        grupo = f'''<section class="secao" style="padding-top:0"><div class="wrap"><div class="cta-grupo revela"><span class="ic">{ic("whats", 34)}</span><div><h2>Alertas e novidades no seu celular</h2><p>{esc(GRUPO.get("texto",""))}</p></div>
 <a class="btn btn-neon" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">Entrar no canal</a></div></div></section>'''
     jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE["nome"], "description": SITE["descricao"], "inLanguage": "pt-BR",
               "publisher": {"@type": "Organization", "name": SITE["nome"], "sameAs": [x["url"] for x in SITE.get("redes", [])]}}
@@ -374,10 +368,10 @@ def home():
 </div>
 </div></section>
 
-<section class="secao" id="assuntos"><div class="wrap">
-<h2 class="sr">Últimos artigos por assunto</h2>
+<section class="secao" id="artigos"><div class="wrap">
 {blocos}
 </div></section>
+{calc_home}
 {vitr}
 {grupo}
 '''
