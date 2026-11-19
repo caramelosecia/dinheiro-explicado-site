@@ -90,6 +90,56 @@
   ],
   "posts": [
     {
+      "slug": "13-salario-2026-primeira-parcela",
+      "titulo": "13º salário 2026: a 1ª parcela cai até 30/11; veja quanto você recebe",
+      "resumo": "A primeira parcela do 13º tem que estar na conta até segunda-feira, 30 de novembro, e vale metade do salário, sem descontos. Veja quem tem direito, como calcular e quando sai a segunda.",
+      "categoria": "trabalho",
+      "data": "2026-11-19",
+      "atualizado": "2026-11-19",
+      "capa": "",
+      "alt_capa": "",
+      "fontes": [
+        {
+          "nome": "Lei nº 4.749/1965 — prazos e adiantamento do 13º (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+        },
+        {
+          "nome": "Lei nº 4.090/1962 — cria o 13º salário (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm"
+        },
+        {
+          "nome": "Lei nº 15.270/2025 — isenção do Imposto de Renda até R$ 5 mil (Diário Oficial da União)",
+          "url": "https://www.in.gov.br/web/dou/-/lei-n-15.270-de-26-de-novembro-de-2025-671614220"
+        }
+      ],
+      "corpo": "@resposta Quem trabalha com carteira assinada recebe a 1ª parcela do 13º até **segunda-feira, 30 de novembro de 2026**. Ela vale **metade do salário**, sem desconto de INSS nem de Imposto de Renda. A 2ª parcela sai até **sexta, 18 de dezembro**, porque o dia 20 cai num domingo.\n\n## Quem tem direito ao 13º\n\nTem direito quem trabalhou pelo menos 15 dias no ano com carteira assinada. Entram nessa lista:\n\n- trabalhadores com carteira assinada (CLT), inclusive quem está em contrato de experiência;\n- empregadas e empregados domésticos;\n- trabalhadores temporários e avulsos;\n- aposentados e pensionistas do INSS, que recebem pelo próprio INSS, em outro calendário.\n\n**Não recebem 13º:** MEI, autônomos e estagiários, porque não têm vínculo de emprego. Quem é demitido **por justa causa** também perde o 13º proporcional daquele ano.\n\n## Quando cai cada parcela em 2026\n\n| Parcela | Prazo final | O que vem nela |\n|---|---|---|\n| 1ª parcela | 30/11/2026 (segunda-feira) | Metade do salário, sem descontos |\n| 2ª parcela | 18/12/2026 (sexta-feira) | O restante, já com INSS e, se for o caso, Imposto de Renda |\n\nA empresa pode pagar antes, mas nunca depois desses dias. A lei manda pagar a segunda parcela até 20 de dezembro; como em 2026 essa data é um domingo, o pagamento tem que sair no último dia útil antes dela, a sexta-feira, 18.\n\n> Quem pediu para receber o adiantamento junto com as férias pode já ter recebido a 1ª parcela. Confira no seu holerite.\n\n## Quanto você vai receber na 1ª parcela\n\nA conta é simples: **pegue o salário e divida por 2.** Para quem trabalhou o ano todo na mesma empresa:\n\n| Salário bruto | 1ª parcela (até 30/11) |\n|---|---|\n| R$ 1.621 (salário mínimo) | R$ 810,50 |\n| R$ 2.500 | R$ 1.250 |\n| R$ 3.000 | R$ 1.500 |\n| R$ 5.000 | R$ 2.500 |\n\nSe você recebe hora extra, comissão ou adicional (noturno, insalubridade), a média desses valores também entra no cálculo.\n\n## E se eu entrei na empresa no meio do ano?\n\nAí o 13º é **proporcional**: você ganha 1/12 do salário por mês trabalhado. Conta como mês inteiro todo mês em que você trabalhou 15 dias ou mais.\n\nExemplo: entrou em 10 de junho, com salário de R$ 3.000. De junho a dezembro são 7 meses.\n\n1. R$ 3.000 ÷ 12 = R$ 250 por mês\n2. R$ 250 × 7 meses = R$ 1.750 de 13º no ano\n3. A 1ª parcela é metade: **R$ 875**\n\n## Vai ter desconto de Imposto de Renda?\n\nNa 1ª parcela, não: ela vem cheia. O desconto de INSS e de Imposto de Renda é feito todo na 2ª parcela, por isso ela costuma vir menor.\n\nA boa notícia de 2026: com a nova lei do Imposto de Renda, **quem tem 13º de até R$ 5 mil não paga imposto** sobre ele. Entre R$ 5 mil e R$ 7.350, o imposto fica menor. O INSS continua sendo descontado normalmente.\n\n## E se a empresa não pagar até 30/11?\n\nPrimeiro, converse com o RH e peça o holerite. Se o pagamento não sair, você pode:\n\n1. procurar o sindicato da sua categoria;\n2. fazer uma denúncia no Ministério do Trabalho, pelo site gov.br;\n3. buscar a Justiça do Trabalho.\n\nA empresa que atrasa o 13º pode ser multada na fiscalização.\n\n## Vai usar o 13º para pagar dívidas?\n\nSe você tem conta atrasada, o 13º pode ajudar a limpar o nome. Até 6 de dezembro, o Feirão Limpa Nome da Serasa tem descontos de até 99%: veja [como negociar sem cair em golpe](/blog/feirao-limpa-nome-serasa-como-negociar/). E, se precisar de um dinheiro a mais para fechar a conta, faça a simulação na nossa [calculadora de renda extra](/ferramentas/).\n\n@golpe Ninguém precisa pagar nada para \"liberar\" o 13º. Desconfie de mensagem, ligação ou link que peça dados bancários, senha ou PIX dizendo que o seu 13º está retido."
+    },
+    {
+      "slug": "feirao-limpa-nome-serasa-como-negociar",
+      "titulo": "Feirão Limpa Nome vai até 6/12: como negociar dívidas sem cair em golpe",
+      "resumo": "A 36ª edição do Feirão Limpa Nome da Serasa tem mais de 750 milhões de ofertas e descontos de até 99%, até 6 de dezembro. Veja o passo a passo, os canais oficiais e como fugir dos golpes.",
+      "categoria": "dividas",
+      "data": "2026-11-19",
+      "atualizado": "2026-11-19",
+      "capa": "",
+      "alt_capa": "",
+      "fontes": [
+        {
+          "nome": "Serasa — anúncio da 36ª edição do Feirão Limpa Nome",
+          "url": "https://www.serasa.com.br/imprensa/recorde-84-2-milhoes-inadimplentes-serasa-feirao-limpa-nome-3-mil-empresas/"
+        },
+        {
+          "nome": "Código de Defesa do Consumidor, art. 43 (Planalto)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+        },
+        {
+          "nome": "Banco Central — Registrato (consulta gratuita de dívidas em bancos)",
+          "url": "https://www.bcb.gov.br/cidadaniafinanceira/registrato"
+        }
+      ],
+      "corpo": "@resposta Até **23h59 de domingo, 6 de dezembro de 2026**, dá para negociar dívidas atrasadas com **descontos de até 99%** no Feirão Limpa Nome da Serasa. A negociação é gratuita e só deve ser feita pelos canais oficiais: site, aplicativo, WhatsApp da Serasa ou agências dos Correios.\n\n## O que é o Feirão Limpa Nome\n\nÉ um mutirão de negociação de dívidas organizado pela Serasa. Nesta 36ª edição, que começou em 3 de novembro, são **mais de 3,3 mil empresas** participando e **mais de 750 milhões de ofertas**. Entram bancos, cartões, lojas, contas de luz, água, telefone e internet.\n\nO Brasil tem hoje **84,2 milhões de pessoas** com contas em atraso, um recorde, segundo a Serasa. Se você está nessa lista, não está sozinho.\n\n## Onde negociar (só nos canais oficiais)\n\n| Canal | Como usar |\n|---|---|\n| Site | serasa.com.br, entrando com o seu CPF |\n| Aplicativo | App Serasa, no Google Play ou na App Store |\n| WhatsApp | (11) 99575-2096 |\n| Correios | Mais de 7 mil agências, sem custo até o fim do Feirão. Leve documento oficial com foto. |\n\nAs ofertas são as mesmas no site, no app e nos Correios.\n\n## Passo a passo para negociar\n\n1. **Veja quanto você deve.** Entre no site ou no app da Serasa com o seu CPF. Aparecem as dívidas e as ofertas de cada empresa.\n2. **Some as parcelas que cabem no seu mês.** Antes de aceitar, olhe quanto sobra do seu salário depois das contas fixas. Parcela que não cabe vira dívida de novo.\n3. **Compare à vista e parcelado.** O desconto costuma ser maior à vista. Se você vai receber o 13º, pode valer usar uma parte para quitar ([veja quando cai o 13º](/blog/13-salario-2026-primeira-parcela/)).\n4. **Feche o acordo e pague pelo próprio canal.** O boleto ou o PIX são gerados ali mesmo.\n5. **Guarde o comprovante** e o número do acordo.\n\n> Comece pelas dívidas que mais pesam: as de juros mais altos, como cartão de crédito e cheque especial, e as contas essenciais, como luz e água.\n\n## Em quanto tempo o nome fica limpo?\n\nSegundo a Serasa, nas dívidas que permitem, o nome fica limpo **na hora**, quando o acordo é pago por PIX. Nos outros casos, a empresa tem até **5 dias úteis** depois do pagamento para pedir a retirada do seu nome do cadastro de inadimplentes. Se passar desse prazo, reclame com a empresa e, se não resolver, no Procon.\n\n## Tenho dívida com banco que não aparece na Serasa\n\nUse o **Registrato**, do Banco Central. Ele é gratuito e mostra todas as dívidas e empréstimos que você tem em bancos e financeiras, mesmo as que não estão na Serasa. Com essa lista na mão, você negocia direto com o banco.\n\n## Como não cair em golpe no Feirão\n\nOs golpistas aproveitam o Feirão para mandar falsos acordos. Fique atento:\n\n- **Entre sempre digitando o endereço** serasa.com.br ou pelo app oficial. Não clique em link que chegou por SMS ou e-mail.\n- **Confira o beneficiário** do boleto ou do PIX antes de pagar. Tem que ser a empresa credora ou a Serasa, não o nome de uma pessoa.\n- **Desconfie de quem liga oferecendo desconto** e pressiona para pagar na hora.\n- **Ninguém cobra taxa** para negociar ou para \"limpar o nome\". A negociação no Feirão é gratuita.\n\n## E se não der para pagar agora?\n\nNegocie só o que cabe. Se o orçamento não fecha, um dinheiro extra pode ajudar: use a nossa [calculadora](/ferramentas/) para ver quanto você precisa juntar por mês para quitar a dívida no prazo que você escolher.\n\n@golpe A Serasa não pede senha de banco nem pede PIX para conta de pessoa física. Se alguém fizer isso em nome do Feirão, é golpe: desligue e negocie só pelos canais oficiais."
+    },
+    {
       "slug": "exemplo-de-artigo",
       "rascunho": true,
       "titulo": "Exemplo: como um artigo aparece no Dinheiro Explicado",
