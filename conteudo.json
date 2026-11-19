@@ -28,6 +28,14 @@
       "Renda extra",
       "Limpar o nome",
       "13º salário"
+    ],
+    "redes": [
+      {
+        "nome": "Instagram",
+        "icone": "instagram",
+        "url": "https://www.instagram.com/sigadinheiroexplicado/",
+        "usuario": "@sigadinheiroexplicado"
+      }
     ]
   },
   "categorias": [

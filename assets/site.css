@@ -386,3 +386,8 @@ p{margin:0 0 1em}
   .hero h1 em{background-size:100% 100%}
 }
 @media (max-width:600px){.perguntas{display:none}.hero .wrap{padding:36px 0 44px}}
+.redes{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:4px 0 18px}
+.redes span{width:100%;color:#fff;font-weight:700;font-size:.95rem}
+.rodape .redes a{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:9px 16px;border-radius:999px;color:#fff;text-decoration:none;transition:background .2s,color .2s,transform .2s var(--ease)}
+.rodape .redes a:hover{background:var(--neon);color:var(--noite);text-decoration:none;transform:translateY(-2px)}
+.redes b{font-weight:600;font-size:.92rem}

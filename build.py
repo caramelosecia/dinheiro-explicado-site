@@ -22,7 +22,7 @@ GRUPO = SITE.get("grupo_ofertas", {}) if SITE.get("grupo_ofertas", {}).get("url"
 DOM = SITE.get("dominio", "").rstrip("/")
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 TEM_ACHADOS = bool(VITRINE)
-VER = "2"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
+VER = "3"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
 
 AVISO_AFILIADO = ("Este conteúdo tem links de afiliado. Se você comprar por eles, o Dinheiro Explicado pode receber uma comissão, "
                   "sem nenhum custo extra para você. Isso não muda o que a gente recomenda.")
@@ -65,6 +65,7 @@ P = {
  "info": '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
  "estrela": '<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
  "topo": '<path d="m6 15 6-6 6 6"/>',
+ "instagram": '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',
 }
 def ic(nome, t=24):
     return f'<svg width="{t}" height="{t}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{P[nome]}</svg>'
@@ -184,6 +185,8 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
            + (item("achados/", "Achados", "achados") if TEM_ACHADOS else "")
            + item("quem-somos/", "Quem somos", "sobre"))
     cats_rod = "".join(f'<li><a href="{u_assunto(raiz, c["slug"])}">{esc(c["nome"])}</a></li>' for c in dados["categorias"])
+    redes = SITE.get("redes", [])
+    redes_rod = ('<div class="redes"><span>Siga o Dinheiro Explicado</span>' + "".join(f'<a href="{esc(x["url"])}" target="_blank" rel="noopener me" aria-label="{esc(x["nome"])} {esc(x.get("usuario",""))}">{ic(x["icone"], 20)}<b>{esc(x.get("usuario") or x["nome"])}</b></a>' for x in redes) + '</div>') if redes else ""
     grupo_rod = f'<a class="btn btn-neon" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">{ic("whats", 20)} {esc(GRUPO.get("nome") or "Entrar no grupo")}</a>' if GRUPO else ""
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
@@ -219,6 +222,7 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
 <div><img src="{raiz}img/logo-branco.png?v={VER}" alt="Dinheiro Explicado" width="872" height="320">
 <p>Veículo de comunicação independente sobre o dinheiro do dia a dia do brasileiro. Toda informação com fonte oficial citada e data de atualização.</p>
 <p><strong style="color:#fff">Não somos banco, fintech nem correspondente bancário.</strong> Nunca pedimos seus dados bancários, senha ou pagamento. Links de afiliado são sempre identificados.</p>
+{redes_rod}
 {grupo_rod}</div>
 <div><h4>Assuntos</h4><ul>{cats_rod}</ul></div>
 <div><h4>O site</h4><ul>
@@ -346,7 +350,8 @@ def home():
     if GRUPO:
         grupo = f'''<section class="secao"><div class="wrap"><div class="cta-grupo revela"><span class="ic">{ic("whats", 34)}</span><div><h2>Ofertas e alertas no seu celular</h2><p>{esc(GRUPO.get("texto",""))}</p></div>
 <a class="btn btn-neon" href="{esc(GRUPO["url"])}" target="_blank" rel="noopener">Entrar no grupo</a></div></div></section>'''
-    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE["nome"], "description": SITE["descricao"], "inLanguage": "pt-BR"}
+    jsonld = {"@context": "https://schema.org", "@type": "WebSite", "name": SITE["nome"], "description": SITE["descricao"], "inLanguage": "pt-BR",
+              "publisher": {"@type": "Organization", "name": SITE["nome"], "sameAs": [x["url"] for x in SITE.get("redes", [])]}}
     if DOM:
         jsonld["url"] = DOM + "/"
         jsonld["potentialAction"] = {"@type": "SearchAction", "target": DOM + "/blog/?q={busca}", "query-input": "required name=busca"}
@@ -417,7 +422,7 @@ def artigo(p):
 <button type="button" class="btn-comp" data-copiar>{ic("link", 20)} <span>Copiar link</span></button></div>'''
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Article", "headline": p["titulo"], "description": p["resumo"], "datePublished": p["data"], "dateModified": at,
-         "inLanguage": "pt-BR", "author": {"@type": "Person", "name": a["nome"]}, "publisher": {"@type": "Organization", "name": SITE["nome"]}},
+         "inLanguage": "pt-BR", "author": {"@type": "Person", "name": a["nome"]}, "publisher": {"@type": "Organization", "name": SITE["nome"], "sameAs": [x["url"] for x in SITE.get("redes", [])]}},
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Início", **({"item": DOM + "/"} if DOM else {})},
             {"@type": "ListItem", "position": 2, "name": cat["nome"], **({"item": f"{DOM}/blog/?assunto={cat['slug']}"} if DOM else {})},
