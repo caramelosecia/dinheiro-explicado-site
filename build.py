@@ -22,6 +22,7 @@ GRUPO = SITE.get("grupo_ofertas", {}) if SITE.get("grupo_ofertas", {}).get("url"
 DOM = SITE.get("dominio", "").rstrip("/")
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 TEM_ACHADOS = bool(VITRINE)
+VER = "2"  # mude para forçar os navegadores a baixar CSS, JS e logos de novo
 
 AVISO_AFILIADO = ("Este conteúdo tem links de afiliado. Se você comprar por eles, o Dinheiro Explicado pode receber uma comissão, "
                   "sem nenhum custo extra para você. Isso não muda o que a gente recomenda.")
@@ -196,9 +197,9 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
 <meta property="og:title" content="{esc(titulo)}"><meta property="og:description" content="{esc(descricao)}">
 <meta name="twitter:card" content="summary_large_image">
 {meta_dom}
-<link rel="icon" href="{raiz}favicon.ico" sizes="any"><link rel="icon" type="image/png" href="{raiz}img/favicon-48.png"><link rel="apple-touch-icon" href="{raiz}img/apple-touch-icon.png">
+<link rel="icon" href="{raiz}favicon.ico?v={VER}" sizes="any"><link rel="icon" type="image/png" href="{raiz}img/favicon-48.png?v={VER}"><link rel="apple-touch-icon" href="{raiz}img/apple-touch-icon.png?v={VER}">
 {FONTES}
-<link rel="stylesheet" href="{raiz}assets/site.css">
+<link rel="stylesheet" href="{raiz}assets/site.css?v={VER}">
 <script>document.documentElement.classList.add('js')</script>
 {extra_head}
 </head>
@@ -206,7 +207,7 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <div class="faixa-golpe" role="note"><div class="wrap">{ic("escudo", 18)}<span><strong>Atenção:</strong> nenhum órgão público cobra para liberar benefício. Pediram pagamento antecipado? É golpe.</span></div></div>
 <header class="topo"><div class="wrap">
-<a class="marca" href="{u(raiz)}"><img src="{raiz}img/logo.png" alt="Dinheiro Explicado — página inicial" width="872" height="320"></a>
+<a class="marca" href="{u(raiz)}"><img src="{raiz}img/logo.png?v={VER}" alt="Dinheiro Explicado — página inicial" width="872" height="320"></a>
 <button class="btn-menu" aria-expanded="false" aria-controls="menu"><span class="hamb"><i></i><i></i><i></i></span> Menu</button>
 <nav class="menu" id="menu" aria-label="Principal">{nav}<a class="cta-menu" href="{u(raiz, "blog/")}#busca">{ic("lupa", 18)}<span>Buscar</span></a></nav>
 </div></header>
@@ -215,7 +216,7 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
 </main>
 <footer class="rodape"><div class="wrap">
 <div class="grade">
-<div><img src="{raiz}img/logo-branco.png" alt="Dinheiro Explicado" width="872" height="320">
+<div><img src="{raiz}img/logo-branco.png?v={VER}" alt="Dinheiro Explicado" width="872" height="320">
 <p>Veículo de comunicação independente sobre o dinheiro do dia a dia do brasileiro. Toda informação com fonte oficial citada e data de atualização.</p>
 <p><strong style="color:#fff">Não somos banco, fintech nem correspondente bancário.</strong> Nunca pedimos seus dados bancários, senha ou pagamento. Links de afiliado são sempre identificados.</p>
 {grupo_rod}</div>
@@ -233,7 +234,7 @@ def pagina(raiz, caminho, titulo, descricao, conteudo, atual="", og_img="img/og-
 <div class="legal"><span>© {date.today().year} Dinheiro Explicado.</span><span>Conteúdo informativo. Confirme sempre no canal oficial do órgão responsável.</span></div>
 </div></footer>
 <button class="ir-topo" type="button" aria-label="Voltar ao topo">{ic("topo", 22)}</button>
-<script src="{raiz}assets/site.js" defer></script>
+<script src="{raiz}assets/site.js?v={VER}" defer></script>
 </body>
 </html>'''
 
